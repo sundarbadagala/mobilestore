@@ -1,0 +1,14 @@
+.headear-font{
+    font-size: 25px;
+}
+
+@media screen and (max-width:480px) {
+    .headear-font{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:320px) {
+    .headear-font{
+        font-size: 17px;
+    }
+}
