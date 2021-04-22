@@ -1,14 +1,15 @@
 import React from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import './Styles.css'
 
 function Navbar() {
     return (
-        <Container fluid className='bg-primary p-1'>
+        <Container fluid className='bg-primary p-2'>
             <Row>
-                <Col className='ml-3 text-uppercase'>
+                <Col className='ml-3 text-uppercase d-flex align-items-center'>
                     <Link to='/' className='text-decoration-none text-dark'>
-                        <h3 className='font-weight-bold font-italic'>Mobile Store</h3>
+                        <span className='font-weight-bold font-italic headear-font'>Mobile Store</span>
                     </Link>
                 </Col>
                 <Col className='text-right mr-3'>
