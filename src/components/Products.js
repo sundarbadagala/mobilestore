@@ -1,11 +1,24 @@
 import React from 'react'
+import ProductCard from './ProductCard'
+import {ProductConsumer} from './Context'
 
 function Products() {
     return (
-        <div>
-            this is Products
+        <div className='d-flex flex-wrap'>
+        <ProductConsumer>
+            {
+                value =>{
+                    return(
+                        value.products.map(item =>
+                                <ProductCard key={item.id} product={item} value={value}/>
+                            )
+                    )
+                }
+            }
+        </ProductConsumer>
         </div>
     )
 }
 
 export default Products
+
