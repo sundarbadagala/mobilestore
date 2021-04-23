@@ -1,9 +1,14 @@
 .headear-font{
     font-size: 25px;
 }
-
 .card-size{
     width: 200px;
+}
+.btn-circle{
+    border-radius: 50%;
+}
+.btn-size{
+    width: 40px;
 }
 
 @media screen and (max-width:480px) {

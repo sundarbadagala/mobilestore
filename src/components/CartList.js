@@ -4,7 +4,7 @@ import {ProductConsumer} from './Context'
 
 function CartList() {
     return (
-        <div>
+        <div className='mt-3'>
             <ProductConsumer>
                 {
                     value =>{
