@@ -82,7 +82,22 @@ class ProductProvider extends React.Component{
         })
     }
     decrementItem=(id)=>{
-        console.log('item decremented')
+        let tempCart = [...this.state.cart]
+        const index = tempCart.indexOf(this.getItem(id))
+        const product = tempCart[index]
+        product.count = product.count - 1
+        if(product.count === 0){
+            this.removeItem(id)
+        }else{
+            product.total = product.count * product.price
+            this.setState(()=>{
+                return{
+                    cart: [...tempCart]
+                }
+            },()=>{
+                this.addTotal()
+            }) 
+        }
     }
     removeItem=(id)=>{
         let tempProducts = [...this.state.products]
