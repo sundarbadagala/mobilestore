@@ -3,7 +3,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap'
 
 function CartItems({product, value}) {
     const {id, title, company, price, count, total}= product
-    const {decrementItem, incrementItem, removeItem, clearCart}= value
+    const {decrementItem, incrementItem, removeItem}= value
     return (
         <Container>
             <Row>
