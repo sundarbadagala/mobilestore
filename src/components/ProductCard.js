@@ -2,24 +2,29 @@ import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import './Styles.css'
+import {Currency} from './CurrencyFormat'
 
 function ProductCard({product, value}) {
     const {id, img, title, company, price, inCart}= product
-    const {addToCart} = value
+    const {addToCart, handleDetails} = value
     return (
         <div>
-            <Card className='m-2 card-size'>
+            <Card className='m-2 card-size flow-hidden card-hover'>
+                <div onClick={()=>handleDetails(id)}>
                 <Link to='/details'>
-                    <Card.Img src={img} alt='' height='180px'/>
+                    <Card.Img src={img} alt='' className='card-size img-hover'/>
                 </Link>
-                <Card.Header>
+                </div>
+                <Card.Header className='text-hover'>
                     <span>{company}</span><br/>
                     <span>{title}</span><br/>
-                    <span>{price}</span><br/>
+                    <span>{Currency(price)}</span><br/>
                 </Card.Header>
                 <Card.Body className='p-1'>
                     <Button block onClick={()=>addToCart(id)} disabled={inCart ? true : false}>
-                        {inCart ? <span>in Cart</span>: <span>add to cart</span>}
+                        {inCart ? 
+                            <span className=' text-capitalize'>in Cart</span>: <span className='text-capitalize'>add to cart</span>
+                        }
                     </Button>
                 </Card.Body>
             </Card>

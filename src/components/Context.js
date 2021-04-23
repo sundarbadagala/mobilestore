@@ -130,6 +130,14 @@ class ProductProvider extends React.Component{
             this.addTotal()
         })
     }
+    handleDetails=(id)=>{
+        const product = this.getItem(id)
+        this.setState(()=>{
+            return{
+                details: product
+            }
+        })
+    }
     render(){
         return(
             <ProductContext.Provider value={{
@@ -138,7 +146,8 @@ class ProductProvider extends React.Component{
                 incrementItem: this.incrementItem,
                 decrementItem: this.decrementItem,
                 removeItem: this.removeItem,
-                clearCart: this.clearCart
+                clearCart: this.clearCart,
+                handleDetails: this.handleDetails
             }}>
                 {this.props.children}
             </ProductContext.Provider>

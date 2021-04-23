@@ -10,7 +10,19 @@
 .btn-size{
     width: 40px;
 }
-
+.img-hover:hover{
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s ease-out;
+}
+.flow-hidden{
+    overflow: hidden;
+}
+.text-hover:hover{
+    color: blue;
+}
+.card-hover:hover{
+    box-shadow: 0px 0px 2px black;
+}
 @media screen and (max-width:480px) {
     .headear-font{
         font-size: 20px;

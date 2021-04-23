@@ -113,12 +113,13 @@ export const storeProducts = [
 
 
 export const detailProducts ={
-            id:1,
-            title:'Note 10 Pro',
-            company:'Redmi',
-            price:19999,
-            img:'https://i02.appmifile.com/828_operator_in/04/03/2021/6669d6a3823d22029a4f8180fddef109.jpg',
-            inCart:false,
-            count:0,
-            total:0
+    id:1,
+    title:'Note 10 Pro',
+    company:'Redmi',
+    price:20000,
+    img:'https://i02.appmifile.com/828_operator_in/04/03/2021/6669d6a3823d22029a4f8180fddef109.jpg',
+    inCart:false,
+    count:0,
+    total:0,
+    info:"The Redmi Note 10 Pro packs a punch in every department. The 16.9cm (6.67) FHD+ Super AMOLED ultra-bright display gives a billion colours, which come true to life thanks to the 100% DCI-P3 colour gamut. This smartphone features a magnificent 64MP Quad Camera that combines a powerful 64MP primary sensor, 8MP ultra-wide angle lens, a 5MP super tele-macro lens and a 2MP depth sensor for the professional photographer in you. Enjoy heavy-duty gaming, multi-tasking at peak performance while on the go with the huge 5020mAh battery and a 33W Fast Charger (in-box)."
 }
