@@ -54,7 +54,7 @@ class ProductProvider extends React.Component{
     }
     addTotal=(id)=>{
         let itemsCost = 0
-        this.state.cart.map(item => itemsCost += item.price)
+        this.state.cart.map(item => itemsCost += item.total)
         const taxCost = itemsCost * 0.05
         const totalCost = itemsCost + taxCost
         this.setState(()=>{
@@ -66,16 +66,54 @@ class ProductProvider extends React.Component{
         })
     }
     incrementItem=(id)=>{
-        console.log('item incemented')
+        let tempCart = [...this.state.cart]
+        const index = tempCart.indexOf(this.getItem(id))
+        const product = tempCart[index]
+        product.count = product.count + 1
+        product.total = product.count * product.price
+
+        this.setState(()=>{
+            return{
+                cart : [...tempCart]
+            }
+        },
+        ()=>{
+            this.addTotal()
+        })
     }
     decrementItem=(id)=>{
         console.log('item decremented')
     }
     removeItem=(id)=>{
-        console.log('item removed')
+        let tempProducts = [...this.state.products]
+        let tempCart = [...this.state.cart]
+        tempCart = tempCart.filter(item => item.id !== id)
+        const index = tempProducts.indexOf(this.getItem(id))
+        const removedItem = tempProducts[index]
+        removedItem.inCart = false
+        removedItem.count = 0
+        removedItem.total = 0
+
+        this.setState(()=>{
+            return{
+                products: [...tempProducts],
+                cart: [...tempCart]
+            }
+        },
+        ()=>{
+            this.addTotal()
+        })
     }
-    clearCart=(id)=>{
-        console.log('cart cleared')
+    clearCart=()=>{
+        this.setState(()=>{
+            return{
+                cart:[]
+            }
+        },
+        ()=>{
+            this.setProducts()
+            this.addTotal()
+        })
     }
     render(){
         return(
