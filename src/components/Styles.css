@@ -2,13 +2,23 @@
     font-size: 25px;
 }
 
+.card-size{
+    width: 200px;
+}
+
 @media screen and (max-width:480px) {
     .headear-font{
         font-size: 20px;
+    }
+    .card-size{
+        width: 160px;
     }
 }
 @media screen and (max-width:320px) {
     .headear-font{
         font-size: 17px;
+    }
+    .card-size{
+        width: 130px;
     }
 }
