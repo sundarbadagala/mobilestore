@@ -1,13 +1,14 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import './Styles.css'
 
 function ProductCard({product, value}) {
     const {id, img, title, company, price, inCart}= product
     const {addToCart} = value
     return (
         <div>
-            <Card style={{width:'180px'}} className='m-2'>
+            <Card className='m-2 card-size'>
                 <Link to='/details'>
                     <Card.Img src={img} alt='' height='180px'/>
                 </Link>
