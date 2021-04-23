@@ -1,0 +1,29 @@
+[33mcommit c24bbe1a830bec657fcb0e298429e376f8f809a2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: unknown <sundar.badagala@gmail.com>
+Date:   Thu Apr 22 18:55:53 2021 +0530
+
+    'stylesheet-added'
+
+[33mcommit bb6ac86034462f0bcc7280a8e819ac3d30a101d9[m
+Author: unknown <sundar.badagala@gmail.com>
+Date:   Thu Apr 22 18:55:14 2021 +0530
+
+    'Data-file-added'
+
+[33mcommit 1c12d148d2d663fbfd90e517e6ff6d8eedcab134[m
+Author: unknown <sundar.badagala@gmail.com>
+Date:   Thu Apr 22 18:52:41 2021 +0530
+
+    'navbar-responsive'
+
+[33mcommit c5a43542b97b1f12362803ea67b0ce3eb29fb734[m
+Author: unknown <sundar.badagala@gmail.com>
+Date:   Thu Apr 22 18:28:43 2021 +0530
+
+    'create-navbar'
+
+[33mcommit 9b45a67ba1c853f5fc801eae1fa08dc42b1b421c[m
+Author: unknown <sundar.badagala@gmail.com>
+Date:   Thu Apr 22 17:49:46 2021 +0530
+
+    Initialize project using Create React App

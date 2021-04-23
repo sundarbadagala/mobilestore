@@ -6,10 +6,12 @@ import Cart from './components/Cart'
 import Details from './components/Details'
 import Default from './components/Default'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {ProductProvider} from './components/Context'
 
 function App() {
   return (
     <div className="App">
+    <ProductProvider>
       <Router>
         <Navbar/>
         <Switch>
@@ -19,6 +21,7 @@ function App() {
           <Route><Default/></Route>
         </Switch>
       </Router>
+      </ProductProvider>
     </div>
   );
 }
