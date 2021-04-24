@@ -19,13 +19,13 @@ function CartItems({product, value}) {
                 </Col>
                 <Col md={2} xs={6}>{Currency(price)}</Col>
                 <Col md={3} xs={8} className='mb-2'>
-                    <Button onClick={()=>decrementItem(id)} variant='danger' size='sm'>
+                    <Button onClick={()=>decrementItem(id)} variant='outline-dark' size='sm'>
                         <i className='fas fa-minus'/>
                     </Button>
                     <Button variant='outline-dark' disabled className='btn-size mx-2' size='sm'>
                         {count}
                     </Button>
-                    <Button onClick={()=>incrementItem(id)} variant='success' size='sm'>
+                    <Button onClick={()=>incrementItem(id)} variant='outline-dark' size='sm'>
                         <i className='fas fa-plus'/>
                     </Button>
                 </Col>
@@ -39,7 +39,7 @@ function CartItems({product, value}) {
                     <i className='fas fa-times mx-2'/> 
                     <span>{price} </span>
                     <i className='fas fa-equals mx-2'/> 
-                    <Button variant='secondary' className='p-0'>{Currency(total)}</Button>
+                    <Button variant='dark' className='p-0'>{Currency(total)}</Button>
                 </Col>
             </Row>
             <hr/>

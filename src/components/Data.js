@@ -123,3 +123,9 @@ export const detailProducts ={
     total:0,
     info:"The Redmi Note 10 Pro packs a punch in every department. The 16.9cm (6.67) FHD+ Super AMOLED ultra-bright display gives a billion colours, which come true to life thanks to the 100% DCI-P3 colour gamut. This smartphone features a magnificent 64MP Quad Camera that combines a powerful 64MP primary sensor, 8MP ultra-wide angle lens, a 5MP super tele-macro lens and a 2MP depth sensor for the professional photographer in you. Enjoy heavy-duty gaming, multi-tasking at peak performance while on the go with the huge 5020mAh battery and a 33W Fast Charger (in-box)."
 }
+
+export const HeaderImages =[
+    'https://images.template.net/wp-content/uploads/2014/11/Natural-Facebook-Cover-Photo.jpg',
+    'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg',
+    'http://www.pic4pk.com/wp-content/uploads/2020/09/facebook-cover-photos-nature.jpg',
+]

@@ -9,13 +9,13 @@ function ProductCard({product, value}) {
     const {addToCart, handleDetails} = value
     return (
         <div>
-            <Card className='m-2 card-size flow-hidden card-hover'>
-                <div onClick={()=>handleDetails(id)}>
+            <Card className='m-2 card-size card-hover text-hover'>
+                <div onClick={()=>handleDetails(id)} className='flow-hidden'>
                 <Link to='/details'>
                     <Card.Img src={img} alt='' className='card-size img-hover'/>
                 </Link>
                 </div>
-                <Card.Header className='text-hover'>
+                <Card.Header>
                     <span>{company}</span><br/>
                     <span>{title}</span><br/>
                     <span>{Currency(price)}</span><br/>

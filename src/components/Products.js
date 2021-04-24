@@ -1,11 +1,12 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 import {ProductConsumer} from './Context'
-import { Container } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 
 function Products() {
     return (
         <Container className='d-flex flex-wrap justify-content-center'>
+        <Row>
         <ProductConsumer>
             {
                 value =>{
@@ -17,6 +18,7 @@ function Products() {
                 }
             }
         </ProductConsumer>
+        </Row>
         </Container>
     )
 }
