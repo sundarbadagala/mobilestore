@@ -23,12 +23,33 @@
 .card-hover:hover{
     box-shadow: 0px 0px 2px black;
 }
+.error-text{
+    font-size: 11px;
+    color: red;
+}
+.error-input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(234, 236, 252);
+    width: 100%;
+}
+.error-input:focus{
+    background-color:rgb(232, 232, 252);
+    outline: none;
+}
+.form-width{
+    width: 30%;
+}
 @media screen and (max-width:480px) {
     .headear-font{
         font-size: 20px;
     }
     .card-size{
         width: 160px;
+    }
+    .form-width{
+        width: 90%;
     }
 }
 @media screen and (max-width:320px) {
