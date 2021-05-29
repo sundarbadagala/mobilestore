@@ -20,7 +20,7 @@ function App() {
           <Route path='/cart'><Cart/></Route>
           <Route path='/details'><Details/></Route>
           <Route path='/sign'><SignUp/></Route>
-          <Route><Default/></Route>
+          <Route path='/:name'><Default/></Route>
         </Switch>
       </Router>
       </ProductProvider>

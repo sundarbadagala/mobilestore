@@ -28,9 +28,8 @@
     color: red;
 }
 .error-input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
+    border-bottom: 2px solid black;
     background-color: rgb(234, 236, 252);
     width: 100%;
 }
