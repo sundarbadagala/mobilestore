@@ -10,7 +10,7 @@ function Navbar() {
             <Row>
                 <Col className='ml-3 text-uppercase d-flex align-items-center'>
                     <Link to='/' className='text-decoration-none text-dark'>
-                        <span className='font-weight-bold font-italic headear-font text-light'>Mobile Store</span>
+                        <span className='font-weight-bold font-italic headear-font text-light'>Mobile Shop</span>
                     </Link>
                 </Col>
                 <Col className='text-right mr-3'>
