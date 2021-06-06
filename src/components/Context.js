@@ -157,4 +157,4 @@ class ProductProvider extends React.Component{
 
 const ProductConsumer = ProductContext.Consumer
 
-export {ProductProvider, ProductConsumer}
+export {ProductProvider, ProductConsumer, ProductContext}

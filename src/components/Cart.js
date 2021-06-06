@@ -1,32 +1,24 @@
-import React from 'react'
-import {ProductConsumer} from './Context'
+import React, { useContext } from 'react'
+import {ProductContext} from './Context'
 import CartList from './CartList'
 import CartTotal from './CartTotal'
 import {Container, Alert} from 'react-bootstrap'
 
 function Cart() {
+    const product = useContext(ProductContext)
     return (
         <Container>
-        <ProductConsumer>
             {
-                value=>{
-                    if(value.cart.length > 0){
-                        return(
-                            <React.Fragment>
-                                <CartList/>
-                                <CartTotal/>
-                            </React.Fragment>
-                        )
-                    }else{
-                        return(
-                            <Alert variant='danger' className='text-center mt-5 text-capitalize p-0'>
-                                <h3>Cart is empty</h3>
-                            </Alert>
-                        )
-                    }
-                }
+                (product.cart.length > 0)? 
+                    <React.Fragment>
+                        <CartList/>
+                        <CartTotal/>
+                    </React.Fragment>
+                    :
+                    <Alert variant='danger' className='text-center mt-5 text-capitalize p-0'>
+                        <h3>Cart is empty</h3>
+                    </Alert>
             }
-        </ProductConsumer>
         </Container>
     )
 }

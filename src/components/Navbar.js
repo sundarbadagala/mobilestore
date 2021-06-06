@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Container, Row, Col, Button, Badge} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import './Styles.css'
-import {ProductConsumer} from './Context'
+import {ProductContext} from './Context'
 
 function Navbar() {
+    const product= useContext(ProductContext)
+    const {cart}= product
     return (
         <Container fluid className='bg-primary p-2'>
             <Row>
@@ -18,15 +20,7 @@ function Navbar() {
                         <Button variant='warning' className=' text-capitalize'>
                             <i className='fas fa-cart-plus'/> 
                             <span className='mx-1'>my cart</span>
-                            <ProductConsumer>
-                                {
-                                    value=>{
-                                        return(
-                                            value.cart.length>0 && <Badge variant='danger' pill>{value.cart.length}</Badge>
-                                        )
-                                    }
-                                }
-                            </ProductConsumer>
+                            {cart.length>0 && <Badge variant='danger' pill> {cart.length} </Badge>}
                         </Button>
                     </Link>
                 </Col>

@@ -1,19 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CartItems  from './CartItems'
-import {ProductConsumer} from './Context'
+import {ProductContext} from './Context'
 
 function CartList() {
+    const product= useContext(ProductContext)
     return (
         <div className='mt-3'>
-            <ProductConsumer>
-                {
-                    value =>{
-                        return(
-                            value.cart.map(item => <CartItems key={item.id} product={item} value={value}/>)
-                        )
-                    }
-                }
-            </ProductConsumer>
+            {
+                product.cart.map(item => <CartItems key={item.id} product={item} value={product}/>)    
+            }
         </div>
     )
 }
