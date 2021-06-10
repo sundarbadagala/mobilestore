@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import {ProductContext} from './Context'
+import {ProductContext} from '../ContextAPI'
 import {Container, Alert, Row, Col, Image, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import {Currency} from './CurrencyFormat'
+import {Currency} from '../CurrencyFormat'
 
 function Details() {
     const product= useContext(ProductContext)

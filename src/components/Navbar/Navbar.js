@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import {Container, Row, Col, Button, Badge} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import './Styles.css'
-import {ProductContext} from './Context'
+import '../Stylesheet.css'
+import {ProductContext} from '../ContextAPI'
 
 function Navbar() {
     const product= useContext(ProductContext)
@@ -10,8 +10,8 @@ function Navbar() {
     return (
         <Container fluid className='bg-primary p-2'>
             <Row>
-                <Col className='ml-3 text-uppercase d-flex align-items-center'>
-                    <Link to='/' className='text-decoration-none text-dark'>
+                <Col className='ml-3 text-uppercase'>
+                    <Link to='/' className='text-decoration-none'>
                         <span className='font-weight-bold font-italic headear-font text-light'>Mobile Store</span>
                     </Link>
                 </Col>

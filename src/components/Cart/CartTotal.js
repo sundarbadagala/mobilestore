@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import {ProductContext} from './Context'
+import {ProductContext} from '../ContextAPI'
 import {Container, Row, Col, Button} from 'react-bootstrap'
-import {Currency} from './CurrencyFormat'
+import {Currency} from '../CurrencyFormat'
 import {Link} from 'react-router-dom'
 
 function CartTotal() {

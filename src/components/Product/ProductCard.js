@@ -1,8 +1,8 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import './Styles.css'
-import {Currency} from './CurrencyFormat'
+import '../Stylesheet.css'
+import {Currency} from '../CurrencyFormat'
 
 function ProductCard({product, value}) {
     const {id, img, title, company, price, inCart}= product

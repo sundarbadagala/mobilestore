@@ -1,7 +1,7 @@
-import React from 'react'
-import {Container, Row, Col, Button, Jumbotron, Alert} from 'react-bootstrap'
+import React, { useContext } from 'react'
+import {Container, Row, Col, Button} from 'react-bootstrap'
 import {Formik, Form, Field, ErrorMessage} from 'formik'
-import {Link} from 'react-router-dom'
+import {ProductContext} from '../ContextAPI'
 
 const initialValues={
     name:'',
@@ -39,11 +39,14 @@ const validate=(data)=>{
     return errors
 }
 
-const onSubmit=values=>{
-    alert(JSON.stringify(values))
-}
+
 
 function SignUp() {
+    const product = useContext(ProductContext)
+    const onSubmit=values=>{
+        alert(JSON.stringify(values))
+        product.clearCart()
+    }
     return (
         <div className='d-flex justify-content-center'>
         <div className='form-width'>

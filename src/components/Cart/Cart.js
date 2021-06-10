@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {ProductContext} from './Context'
+import {ProductContext} from '../ContextAPI'
 import CartList from './CartList'
 import CartTotal from './CartTotal'
 import {Container, Alert} from 'react-bootstrap'
@@ -13,8 +13,7 @@ function Cart() {
                     <React.Fragment>
                         <CartList/>
                         <CartTotal/>
-                    </React.Fragment>
-                    :
+                    </React.Fragment>:
                     <Alert variant='danger' className='text-center mt-5 text-capitalize p-0'>
                         <h3>Cart is empty</h3>
                     </Alert>

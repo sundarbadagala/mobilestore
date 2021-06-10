@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductCard from './ProductCard'
-import {ProductConsumer} from './Context'
+import {ProductConsumer} from '../ContextAPI'
 import { Container, Row } from 'react-bootstrap'
 
 function Products() {

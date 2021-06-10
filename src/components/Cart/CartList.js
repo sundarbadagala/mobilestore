@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import CartItems  from './CartItems'
-import {ProductContext} from './Context'
+import {ProductContext} from '../ContextAPI'
 
 function CartList() {
     const product= useContext(ProductContext)

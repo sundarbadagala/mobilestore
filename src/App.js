@@ -1,13 +1,13 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './components/Navbar'
-import Products from './components/Products'
-import Cart from './components/Cart'
-import Details from './components/Details'
-import Default from './components/Default'
-import SignUp from './components/SignUp'
+import Navbar from './components/Navbar/Navbar'
+import Products from './components/Product/Products'
+import Cart from './components/Cart/Cart'
+import Details from './components/Details/Details'
+import Default from './components/Default/Default'
+import SignUp from './components/SignUp/SignUp'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import {ProductProvider} from './components/Context'
+import {ProductProvider} from './components/ContextAPI'
 
 function App() {
   return (

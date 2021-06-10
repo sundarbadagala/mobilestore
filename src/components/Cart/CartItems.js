@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import {Currency} from './CurrencyFormat'
+import {Currency} from '../CurrencyFormat'
 
 function CartItems({product, value}) {
     const {id, title, company, price, count, total}= product
