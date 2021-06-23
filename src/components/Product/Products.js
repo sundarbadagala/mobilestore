@@ -1,23 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductCard from './ProductCard'
-import {ProductConsumer} from '../ContextAPI'
+import {ProductContext} from '../ContextAPI'
 import { Container, Row } from 'react-bootstrap'
 
 function Products() {
+    const value = useContext(ProductContext)
     return (
         <Container className='d-flex flex-wrap justify-content-center'>
         <Row>
-        <ProductConsumer>
-            {
-                value =>{
-                    return(
-                        value.products.map(item =>
-                                <ProductCard key={item.id} product={item} value={value}/>
-                            )
-                    )
-                }
+            {   
+                value.products.map(item =>
+                        <ProductCard key={item.id} product={item} value={value}/>
+                    )    
             }
-        </ProductConsumer>
         </Row>
         </Container>
     )

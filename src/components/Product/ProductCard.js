@@ -16,8 +16,7 @@ function ProductCard({product, value}) {
                 </Link>
                 </div>
                 <Card.Header>
-                    <span>{company}</span><br/>
-                    <span>{title}</span><br/>
+                    <span>{company} {title}</span><br/>
                     <span>{Currency(price)}</span><br/>
                 </Card.Header>
                 <Card.Body className='p-1'>

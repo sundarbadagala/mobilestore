@@ -6,7 +6,7 @@ import {Currency} from '../CurrencyFormat'
 
 function Details() {
     const product= useContext(ProductContext)
-    const {id, img, title, price, info, inCart, addToCart}= product.details
+    const {id, img, title, price, info, inCart}= product.details
     return (
         <Container className='mt-5'>            
             <Alert variant='primary'>
@@ -21,7 +21,7 @@ function Details() {
                         <Link to='/'>
                             <Button className='mr-2'>Go To Products</Button>
                         </Link>
-                        <Button disabled={inCart ? true : false} onClick={()=>addToCart(id)}>
+                        <Button disabled={inCart ? true : false} onClick={()=>product.addToCart(id)}>
                             {inCart ? <span>In Cart</span> : <span>Add To Cart</span>}
                         </Button>
                     </Col>

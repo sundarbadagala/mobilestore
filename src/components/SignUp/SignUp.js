@@ -49,8 +49,8 @@ function SignUp() {
     }
     return (
         <div className='d-flex justify-content-center'>
-        <div className='form-width'>
-        <Container className='mt-5 font-weight-bold'>
+        <div className='form-width border form-effects'>
+        <Container className='mt-5'>
             <Formik
                 initialValues={initialValues}
                 validate={validate}
